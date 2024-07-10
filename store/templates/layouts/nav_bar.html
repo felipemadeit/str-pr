@@ -1,0 +1,37 @@
+{% load static %}
+
+<header>
+    <nav class="nav-bar">
+        <a href="{% url 'home' %}" alt="" class="logo">
+            <img class="logo-nav" src="{% static 'media/brand/logo-nav.png' %}" alt="logo navbar">
+        </a>
+        <button class="nav-toggle" id="nav-toggle">
+            <img src="{% static  'media/icons-svg/menu.svg' %}">
+        </button>
+
+       
+        
+        <ul class="list-nav" id="list-nav">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'components' %}">Store</a></li>
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'logout' %}">Log Out</a></li>
+                <li>
+                    <a href="{% url 'cart' %}">
+                        <i class="fas fa-shopping-cart shopping-cart-icon"></i>
+                    </a>
+                    <div class="total-cart" id="total-cart"></div>
+                </li>
+            {% else %}
+                <li><a href="{% url 'login' %}">Log in</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+</header>
+
+<div class="menu-toggle" id="menu-toggle">
+</div>
+
+{% block script %}
+    <script src="{% static 'scripts/navBar.js' %}"></script>
+{% endblock %}

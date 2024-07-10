@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block title %}
+    Laptops
+{% endblock %}
+
+
+{% block body %}
+
+    {% include 'layouts/layoutComponentsLaptops.html' %}
+
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'scripts/toggleFunction.js' %}"></script>
+    <script src="{% static 'scripts/main.js' %}"></script>
+{% endblock %}
