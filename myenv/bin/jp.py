@@ -1,4 +1,4 @@
-#!/home/julian/Desktop/Finish_project/myenv/bin/python3
+#!/home/felipe/projects/project-store/myenv/bin/python3
 
 import sys
 import json
