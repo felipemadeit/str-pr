@@ -14,21 +14,24 @@
     </div>
     <div class="container-cards">
         <div class="product-card">
-            <a href="{% url 'accessory' %}"><img class="products-img" id="accessories-img" src="{% static 'media/brand/compnts.png' %}"></a>            
-        </div>
-        <div class="product-card">
-            <a href="{% url 'components' %}"><img class="products-img" id="components-img" src="{% static 'media/brand/prebuild.png' %}"></a>
-        </div>
-        <div class="product-card">
-            <a href="{% url 'laptops' %}"><img class="products-img" id="laptops-img" src="{% static 'media/brand/alp.png' %}"></a>
-        </div>
-        <div class="container-span">
+            <a href="{% url 'accessory' %}">
+                <img class="products-img" id="accessories-img" src="{% static 'media/brand/compnts.png' %}">
+            </a>            
             <span id="accessories-span" class="cards-span">Accessories</span>
-            <span id="prebuild-span" class="cards-span">Components</span>
-            <span id="laptop-span" class="cards-span">Laptops</span>
+        </div>
+        <div class="product-card">
+            <a href="{% url 'components' %}">
+                <img class="products-img" id="components-img" src="{% static 'media/brand/prebuild.png' %}">
+            </a>
+            <span id="components-span" class="cards-span">Components</span>
+        </div>
+        <div class="product-card">
+            <a href="{% url 'laptops' %}">
+                <img class="products-img" id="laptops-img" src="{% static 'media/brand/alp.png' %}">
+            </a>
+            <span id="laptops-span" class="cards-span">Laptops</span>
         </div>
     </div>
-
     <!--Div for brands-->
     <div class="container-brands">
             <div class="container-img-brand"><img class="intel-img" src="{% static 'media/logos-brand/intel.png' %}" alt="intel-logo"></div>
