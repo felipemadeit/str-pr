@@ -225,84 +225,13 @@ header {
     transition: background-color 0.3s; 
 }
 
-
-.container-span {
-    display: flex;
+.product-card span {
     position: absolute;
-    width: 100%;
-    height: 30px;
-    top: 240px;
-    box-sizing: border-box;
-    gap: 300px;
-    padding: 2px 270px;   
-}
-
-@media only screen and (min-width: 1700px) {
-
-    .container-span {
-        padding: 2px 300px;   
-    }
-}
-
-
-.container-span span:nth-child(1) {
-    margin-right: auto; 
-}
-
-.container-span span:nth-child(2) {
-    margin-left: auto;
-    margin-right: auto; 
-}
-
-.container-span span:nth-child(3) {
-    margin-left: auto;
-}
-
-.cards-span {
+    margin-top: 230px;
+    text-align: center;
+    width: 20%;
     color: white;
-    font-size: 20px;
-    font-weight: bolder;
-}
-
-@media (max-width: 400px ) {
-    
-    .container-cards {
-        display: flex;
-        overflow-x: scroll;
-        overflow-y: hidden;
-        box-sizing: border-box;
-        padding: 45px 0;
-        scroll-snap-type: x mandatory;
-        gap: 500px;
-        scroll-behavior: smooth;
-    }
-
-    /* Hide scrollbar for Webkit browsers */
-    .container-cards::-webkit-scrollbar {
-        display: none;
-    }
-
-    /* Hide scrollbar for other browsers (using pseudo-element approach) */
-    .container-cards {
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
-    }
-
-    .product-card {
-        flex: 0 0 auto;
-        margin: 0 35px;
-        scroll-snap-align: center;
-    }
-
-    .product-card span {
-        position: absolute;
-        margin-top: 230px;
-        text-align: center;
-        width: 85%;
-    }    
-}
-
-
+}  
 
 .product-card:hover {
     background-color: #0c1821; 
@@ -335,15 +264,6 @@ a {
     margin-left: auto;
     margin-right: auto;
 }
-
-@media (max-width: 400px ) {
-    
-    .slogan-img {
-        transform: scale(0.7);
-    }
-}
-
-
 
 .products-img {
     position: relative;
@@ -2502,4 +2422,160 @@ input[type="password"] {
 
 .second-mini-img:hover {
     transform: scale(1.1);
+}
+
+
+@media (max-width: 400px ) {
+    
+    .container-cards {
+        display: flex;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        box-sizing: border-box;
+        padding: 45px 0;
+        scroll-snap-type: x mandatory;
+        gap: 500px;
+        scroll-behavior: smooth;
+    }
+
+    /* Hide scrollbar for Webkit browsers */
+    .container-cards::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for other browsers (using pseudo-element approach) */
+    .container-cards {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+
+    .product-card {
+        flex: 0 0 auto;
+        margin: 0 45px;
+        scroll-snap-align: center;
+    }
+
+    .product-card span {
+        position: absolute;
+        margin-top: 230px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+    }    
+
+    .slogan-img {
+        transform: scale(0.7);
+    }
+
+    .container-brands {    
+        display: grid;
+        width: 100%;
+        grid-auto-flow: row;
+        grid-auto-columns: min-content;
+        overflow-x: hidden;
+        gap: 10px;
+        justify-content: center;
+        height: 170px;
+    }
+
+    .container-img-brand {
+        flex: 0 0 auto;
+    }
+
+    .show-all-processors {
+        width: 99%;
+        text-align: center;
+        border-radius: 8px;
+        justify-content: center;
+        position: absolute;
+        border: 3px solid white;
+        margin-top: 480px;
+        margin-left: 0px;
+    }
+
+    .show-all-keyboards {
+        margin-left: 0px;
+    }
+
+
+    .show-all-laptops {
+        margin-left: 0px;
+    }
+
+    .show-all-cards {
+        margin-left: 0px;
+    }
+    
+    .footer {
+        width: 10%;
+        overflow-x: hidden;
+    }
+    
+    .text-processors {
+        width: 100%;
+        position: absolute;
+        top: 720px;
+        margin-left: 0px;
+        justify-content: center;
+        align-items: center;
+        font-weight: bolder;
+    }
+    
+    /* Line to separate the carousels in the home view */
+    
+    .line-separator {
+        position: absolute;
+        margin-left: 0px;
+        top: 680px;
+        width: 100%;
+        height: 4px;
+    }
+
+    .brands {
+        width: 100%;
+        top: 510px;
+    }
+
+    .arrow-next, .arrow-prev{ 
+        display: none;
+    }
+
+
+    .show_products {
+        width: 100%;
+        margin-top: 120px;
+    }
+    
+    .product-carousel {
+        margin-left: 0px;
+        width: 100%;
+
+    }
+    
+    .cards-container {
+        width: 100%;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        gap: 1px;
+        margin-left: 3px;
+        margin-right: 10px;
+    }
+    
+    .card_product {
+        border: 3px solid white;
+    }
+     /* Hide scrollbar for Webkit browsers */
+     .cards-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for other browsers (using pseudo-element approach) */
+    .cards-container {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+
+
 }
