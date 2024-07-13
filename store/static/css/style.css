@@ -2492,33 +2492,49 @@ input[type="password"] {
     }
 
     .show-all-processors {
-        width: 98%;
+        width: 230px;
         text-align: center;
         border-radius: 8px;
         justify-content: center;
         position: absolute;
         border: 3px solid white;
         margin-top: 480px;
-        margin-left: 0px;
+        margin-left: 62px;
     }
 
+    
+
     .show-all-cards {
-        width: 98%;
         text-align: center;
         border-radius: 8px;
         justify-content: center;
         position: absolute;
         border: 3px solid white;
         margin-top: 600px;
-        margin-left: 0px;
+        width: 230px;
+        margin-left: 62px;
     }
 
     .show-all-keyboards {
-        margin-left: 0px;
+        text-align: center;
+        border-radius: 8px;
+        justify-content: center;
+        position: absolute;
+        border: 3px solid white;
+        margin-top: 630px;
+        width: 230px;
+        margin-left: 62px;
     }
 
     .show-all-laptops {
-        margin-left: 0px;
+        text-align: center;
+        border-radius: 8px;
+        justify-content: center;
+        position: absolute;
+        border: 3px solid white;
+        margin-top: 600px;
+        width: 230px;
+        margin-left: 62px;
     }
     
     .footer {
@@ -2551,6 +2567,34 @@ input[type="password"] {
     .text-processors h2 {
         font-weight: 500;
     }
+
+    .text-laptops h2 {
+        font-weight: 500;
+    }
+
+    .text-keyboards {
+        width: 100%;
+        position: absolute;
+        top: 2420px;
+        margin-left: 0px;
+        justify-content: center;
+        align-items: center;   
+    }
+
+    .text-keyboards h2 {
+        font-weight: 500;
+    }
+
+    .text-laptops {
+        width: 100%;
+        position: absolute;
+        top: 1825px;
+        margin-left: 0px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
     
     /* Line to separate the carousels in the home view */
     
@@ -2586,19 +2630,31 @@ input[type="password"] {
     .graphics-cont {
         margin-top: 70px;
     }
+
+    .laptops-cont {
+        margin-top: 170px;
+        width: 100%;
+    }
+
+    .keyboards-cont {
+        margin-top: 200px;
+        width: 100%;
+    }
     
     .cards-container {
         width: 100%;
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-        gap: 1px;
-        margin-left: 3px;
-        margin-right: 50px;
+        scroll-behavior: smooth 1000ms;
+        gap: 80px;
     }
     
     .card_product {
+        flex:0 0 auto;
         border: 3px solid white;
+        margin: 0 77px;
+        scroll-snap-align: center;
+
     }
      /* Hide scrollbar for Webkit browsers */
      .cards-container::-webkit-scrollbar {
