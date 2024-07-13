@@ -522,6 +522,7 @@ a {
     margin-top: 70px;
     margin-left: 480px;
     background-color: #2b2d42;
+
     border: 3px solid ;
     border-radius: 5px;
 }
@@ -2757,5 +2758,21 @@ input[type="password"] {
         right: 50px;
     }
 
+    .container-form-login {
+        display: flex;
+        width: 100%;
+        margin-left: 0px;
+        border: none;
+        background-color: transparent;
+    }
 
+    .btn-login {
+        background-color: black;
+    }
+
+    .to-sign {
+        font-size: 20px;
+    }
+
+    
 }

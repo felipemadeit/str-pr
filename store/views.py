@@ -86,7 +86,6 @@ def remove_from_cart(request, item_id):
 
 
 def home_view(request):
-    print(settings.SECRET_KEY)
     
     """
 
