@@ -99,6 +99,8 @@ header {
     .logo {
         margin-left: 20px;
         transform: scale(0.8);
+        margin-left: 50%;
+        transform: translate(-50%);
     }
 
     .list-nav {
@@ -223,6 +225,7 @@ header {
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
     transition: background-color 0.3s; 
+    background-color: #0c1821; 
 }
 
 .product-card span {
@@ -233,9 +236,6 @@ header {
     color: white;
 }  
 
-.product-card:hover {
-    background-color: #0c1821; 
-}
 
 a {
     text-decoration: none;
@@ -439,86 +439,74 @@ a {
 }
 
 .icon {
-    z-index: 3;
-    text-decoration: none;
-    width: 5.625rem;
-    height: 5.625rem;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin-bottom: 30px;
+  text-decoration: none;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 14px;
+  background-color:#0c1821 ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.icon > i {
+  color: white;
+  font-size: 1.5rem;
+  transition: all 0.2s;
+}
+
+.icon:hover > i {
+  scale: 1.2;
+  color: #f1f1f1;
+}
+
+.icon:before {
+  background: var(--color);
+  content: "";
+  position: absolute;
+  width: 130%;
+  height: 130%;
+  left: -110%;
+  top: 80%;
+  transform: rotate(45deg);
+}
+
+.icon:hover:before {
+  animation: slide 0.7s forwards;
+}
+
+@keyframes slide {
+  50% {
+    left: 10%;
+    top: -40%;
   }
-  
-  .icon {
-    text-decoration: none;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 14px;
-    background-color:#0c1821 ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
-      rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+
+  100% {
+    left: -15%;
+    top: -15%;
   }
-  
-  .icon > i {
-    color: white;
-    font-size: 1.5rem;
-    transition: all 0.2s;
-  }
-  
-  .icon:hover > i {
-    scale: 1.2;
-    color: #f1f1f1;
-  }
-  
-  .icon:before {
-    background: var(--color);
-    content: "";
-    position: absolute;
-    width: 130%;
-    height: 130%;
-    left: -110%;
-    top: 80%;
-    transform: rotate(45deg);
-  }
-  
-  .icon:hover:before {
-    animation: slide 0.7s forwards;
-  }
-  
-  @keyframes slide {
-    50% {
-      left: 10%;
-      top: -40%;
-    }
-  
-    100% {
-      left: -15%;
-      top: -15%;
-    }
-  }
-  
-  .icon:has(.fa-instagram) {
-    --color: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
-  }
-  .icon:has(.fa-linkedin-in) {
-    --color: #0077b5;
-  }
-  .icon:has(.fa-youtube) {
-    --color: #ff0000;
-  }
-  .icon:has(.fa-x-twitter) {
-    --color: #1da1f2;
-  }
-  .icon:has(.fa-github) {
-    --color: #333;
-  }
+}
+
+.icon:has(.fa-instagram) {
+  --color: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+}
+.icon:has(.fa-linkedin-in) {
+  --color: #0077b5;
+}
+.icon:has(.fa-youtube) {
+  --color: #ff0000;
+}
+.icon:has(.fa-x-twitter) {
+  --color: #1da1f2;
+}
+.icon:has(.fa-github) {
+  --color: #333;
+}
+
 .container-creator {
     position: absolute;
     font-size: 20px;
@@ -2155,6 +2143,8 @@ input[type="password"] {
     background-color: #0c1821;
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s; 
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5); 
+
 
 }
 
@@ -2171,7 +2161,6 @@ input[type="password"] {
 
 .button-chat:hover {
     transform: translateY(-5px); 
-    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.5); 
 }
 
 .button-chat:active {
@@ -2451,7 +2440,8 @@ input[type="password"] {
 
     .product-card {
         flex: 0 0 auto;
-        margin: 0 45px;
+        margin-left: 50%;
+        transform: translate(-50%);
         scroll-snap-align: center;
     }
 
@@ -2464,7 +2454,11 @@ input[type="password"] {
         width: 300px;
         font-size: 20px;
         font-weight: 400px;
-    }       
+    }
+    
+    .slogan-div {
+        margin-top: 50px;
+    }
 
     .slogan-img {
         transform: scale(0.7);
@@ -2499,11 +2493,20 @@ input[type="password"] {
         position: absolute;
         border: 3px solid white;
         margin-top: 480px;
-        margin-left: 62px;
+        margin-left: 50%;
+        transform: translateX(-50%);
     }
 
+    .show-all-processors:hover {
+        transform: translateX(-50%) translateY(-5px);
+        box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
+    }
     
-
+    .show-all-processors:active {
+        transform: translateX(-50%) translateY(0);
+    }
+    
+    
     .show-all-cards {
         text-align: center;
         border-radius: 8px;
@@ -2512,7 +2515,17 @@ input[type="password"] {
         border: 3px solid white;
         margin-top: 600px;
         width: 230px;
-        margin-left: 62px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .show-all-cards:hover {
+        transform: translateX(-50%) translateY(-5px);
+        box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
+    }
+    
+    .show-all-cards:active {
+        transform: translateX(-50%) translateY(0);
     }
 
     .show-all-keyboards {
@@ -2523,7 +2536,17 @@ input[type="password"] {
         border: 3px solid white;
         margin-top: 630px;
         width: 230px;
-        margin-left: 62px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .show-all-keyboards:hover {
+        transform: translateX(-50%) translateY(-5px);
+        box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
+    }
+    
+    .show-all-keyboards:active {
+        transform: translateX(-50%) translateY(0);
     }
 
     .show-all-laptops {
@@ -2534,13 +2557,19 @@ input[type="password"] {
         border: 3px solid white;
         margin-top: 600px;
         width: 230px;
-        margin-left: 62px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .show-all-laptops:hover {
+        transform: translateX(-50%) translateY(-5px);
+        box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
     }
     
-    .footer {
-        width: 10%;
-        overflow-x: hidden;
+    .show-all-laptops:active {
+        transform: translateX(-50%) translateY(0);
     }
+    
     
     .text-processors {
         width: 100%;
@@ -2652,7 +2681,8 @@ input[type="password"] {
     .card_product {
         flex:0 0 auto;
         border: 3px solid white;
-        margin: 0 77px;
+        margin-left: 50%;
+        transform: translateX(-50%);
         scroll-snap-align: center;
 
     }
@@ -2667,7 +2697,65 @@ input[type="password"] {
         scrollbar-width: none;  /* Firefox */
     }
 
+    .footer {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .container-creator {
+        position: absolute;
+        width: 50px;
+        font-size: 17px;
+        margin-top: 21px;
+        margin-left: 10%;
+        color: white;
+    }
+
+    .social-links  {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5px;
+        margin-left: 60%;
+        gap: 1px;
+    }
+      
+    .icon {
+      text-decoration: none;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 14px;
+      background-color:#0c1821 ;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+        rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    }
     
+    .line-social {
+        display: flex;
+        position: absolute;
+        width: 3px;
+        height: 60px;
+        margin-top: 20px;
+        margin-left: 50%;
+        transform: translate(-50%);
+        background-color: white;    
+    }
+
+    .button-chat {
+        bottom: 10px;
+        right: 15px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .windowBot {
+        right: 50px;
+    }
 
 
 }
