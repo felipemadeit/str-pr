@@ -2462,7 +2462,9 @@ input[type="password"] {
         justify-content: center;
         align-items: center;
         width: 300px;
-    }    
+        font-size: 20px;
+        font-weight: 400px;
+    }       
 
     .slogan-img {
         transform: scale(0.7);
@@ -2479,12 +2481,18 @@ input[type="password"] {
         height: 170px;
     }
 
+    /* Hide scrollbar for other browsers (using pseudo-element approach) */
+    .container-brands {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+
     .container-img-brand {
         flex: 0 0 auto;
     }
 
     .show-all-processors {
-        width: 99%;
+        width: 98%;
         text-align: center;
         border-radius: 8px;
         justify-content: center;
@@ -2494,16 +2502,22 @@ input[type="password"] {
         margin-left: 0px;
     }
 
+    .show-all-cards {
+        width: 98%;
+        text-align: center;
+        border-radius: 8px;
+        justify-content: center;
+        position: absolute;
+        border: 3px solid white;
+        margin-top: 600px;
+        margin-left: 0px;
+    }
+
     .show-all-keyboards {
         margin-left: 0px;
     }
 
-
     .show-all-laptops {
-        margin-left: 0px;
-    }
-
-    .show-all-cards {
         margin-left: 0px;
     }
     
@@ -2518,8 +2532,24 @@ input[type="password"] {
         top: 720px;
         margin-left: 0px;
         justify-content: center;
+        align-items: center;   
+    }
+
+    .text-cards {
+        width: 100%;
+        position: absolute;
+        top: 1250px;
+        margin-left: 0px;
+        justify-content: center;
         align-items: center;
-        font-weight: bolder;
+    }
+
+    .text-cards h2 {
+        font-weight: 500;
+    }
+
+    .text-processors h2 {
+        font-weight: 500;
     }
     
     /* Line to separate the carousels in the home view */
@@ -2552,6 +2582,10 @@ input[type="password"] {
         width: 100%;
 
     }
+
+    .graphics-cont {
+        margin-top: 70px;
+    }
     
     .cards-container {
         width: 100%;
@@ -2560,7 +2594,7 @@ input[type="password"] {
         scroll-behavior: smooth;
         gap: 1px;
         margin-left: 3px;
-        margin-right: 10px;
+        margin-right: 50px;
     }
     
     .card_product {
@@ -2576,6 +2610,8 @@ input[type="password"] {
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
     }
+
+    
 
 
 }
