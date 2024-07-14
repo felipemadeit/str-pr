@@ -25,6 +25,12 @@
             {% else %}
                 <li><a href="{% url 'login' %}">Log in</a></li>
             {% endif %}
+            <li class="additional-link"><a href="{% url 'processors' %}">Processors</a></li>
+            <li class="additional-link"><a href="{% url 'graphics' %}">Graphics Cards</a></li>
+            <li class="additional-link"><a href="{% url 'motherboards' %}">MotherBoards</a></li>
+            <li class="additional-link"><a href="{% url 'keyboards' %}">Keyboards</a></li>
+            <li class="additional-link"><a href="{% url 'ram' %}">Ram</a></li>
+            <li class="additional-link"><a href="{% url 'case' %}">Cases</a></li>
         </ul>
     </nav>
 </header>

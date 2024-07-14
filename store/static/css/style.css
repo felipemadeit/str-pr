@@ -94,6 +94,9 @@ header {
     font-size: 24px;
 }
 
+.additional-link {
+    display: none;
+}
 
 @media (max-width: 800px ) {
     .logo {
@@ -107,31 +110,42 @@ header {
         display: none;
         position: absolute;
         flex-direction: column;
-        width: 100%;
-        height: 320px;
+        width: 250px;
+        height: 100vh;
         backdrop-filter: blur(20px);
         top: 80px;
-        left: 0;
-        align-items: center;
+        left: -250px;
+        justify-content: left;
         padding-top: 50px;
+        padding-left: 30px;
         box-sizing: border-box;
+        transition: left 0.3s ease;
+    }
+
+    .list-nav li {
+        margin-bottom: 25px; /* Add space between items */
     }
 
     .nav-toggle {
         position: absolute;
         display: flex;
-        right: 40px;
+        left: 42px;
         filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
         transition: 0.2s all ease-out;
         cursor: pointer;
     }
 
     .nav-toggle:hover {
-        transform: rotate(90deg);
+        transform: rotate(180deg);
     }
 
     .list-nav.active {
         display: flex;
+
+    }
+
+    .additional-link {
+        display: block;
     }
 }
     
@@ -2414,6 +2428,10 @@ input[type="password"] {
     transform: scale(1.1);
 }
 
+.brands {
+    display: none;
+}
+
 
 @media (max-width: 400px ) {
     
@@ -2637,6 +2655,7 @@ input[type="password"] {
     }
 
     .brands {
+        display: flex;
         width: 100%;
         top: 510px;
     }
@@ -2830,7 +2849,7 @@ input[type="password"] {
     }
 
     .price-product {
-        top: 440px;
+        top: 460px;
         left: 25px; 
     }
     
@@ -2844,6 +2863,10 @@ input[type="password"] {
         left: 200px;
     }
     
+    .please-login {
+        top: 605px;
+        left: 25px;
+    }
 
     .btn-add  {
         top: 610px;
@@ -2861,6 +2884,7 @@ input[type="password"] {
         justify-content: center;
     }
 
+    
 
     
 }

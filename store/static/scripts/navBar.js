@@ -4,16 +4,22 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.getElementById('list-nav');
     const buttonToggle = document.getElementById('nav-toggle');
 
-    function unfoldMenu() { 
+    function toggleMenu() {
         if (menuToggle.style.display === 'none' || menuToggle.style.display === '') {
-            menuToggle.style.display = 'flex';
+            menuToggle.style.display = 'block'; // Show the menu
+            setTimeout(function() {
+                menuToggle.style.left = '0px'; // Slide in from the left
+            }, 10); // Small delay to allow CSS to apply the display change
         } else {
-            menuToggle.style.display = 'none';
+            menuToggle.style.left = '-250px'; // Slide out to the left
+            setTimeout(function() {
+                menuToggle.style.display = 'none'; // Hide the menu after transition
+            }, 300); // Match the duration of the CSS transition
         }
     }
 
     buttonToggle.addEventListener('click', function() {
-        unfoldMenu();
+        toggleMenu();
     });
 
     
