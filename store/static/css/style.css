@@ -2774,5 +2774,93 @@ input[type="password"] {
         font-size: 20px;
     }
 
+    .carousel-container {
+        top: 30px;
+        left: 0px;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 350px;
+    }
+
+    .carousel-track {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.3s ease;
+        padding: 0;
+    }
+    
+    .carousel-item {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    
+    }
+    
+    .carousel-item img {
+        box-sizing: border-box;
+        width: 300px;
+        height: auto;
+        margin-left: 50%;
+        transform: translate(-50%);
+    }
+
+    .product-name {
+        width: 100%;
+        top: 400px;
+        left: 0px;
+        padding: 0 25px;
+        box-sizing: border-box;
+    }
+
+    .product-name h1 {
+        font-size: 25px;
+    }
+
+    .container-info {
+        height: 100px;
+        top: 490px;
+        left: 12px;
+    }
+
+    .container-info span {
+        margin-left: 10px;
+        font-size: 20px;
+    }
+
+    .price-product {
+        top: 440px;
+        left: 25px; 
+    }
+    
+    .price-product span {
+        font-size: 30px;
+        color: white;
+    }
+
+    .quantity-selector {
+        top: 605px;
+        left: 200px;
+    }
+    
+
+    .btn-add  {
+        top: 610px;
+        left: 25px;
+    }
+
+    .container-product-description {
+        width: 90%;
+        top: 650px;
+        margin-left: 50%;
+        transform: translate(-50%);
+    }
+
+    .container-product-description p {
+        justify-content: center;
+    }
+
+
     
 }
