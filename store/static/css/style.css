@@ -2432,6 +2432,9 @@ input[type="password"] {
     display: none;
 }
 
+.sticky-mobile-panel {
+    display: none;
+}
 
 @media (max-width: 400px ) {
     
@@ -2798,8 +2801,9 @@ input[type="password"] {
         left: 0px;
         position: relative;
         overflow: hidden;
-        width: 100%;
-        height: 350px;
+        width: 99%;
+        height: 300px;
+        background-color: rebeccapurple;
     }
 
     .carousel-track {
@@ -2827,10 +2831,12 @@ input[type="password"] {
 
     .product-name {
         width: 100%;
-        top: 400px;
+        top: 420px;
         left: 0px;
         padding: 0 25px;
         box-sizing: border-box;
+        background-color: red;
+
     }
 
     .product-name h1 {
@@ -2839,18 +2845,21 @@ input[type="password"] {
 
     .container-info {
         height: 100px;
-        top: 490px;
-        left: 12px;
+        width: 99%;
+        top: 520px;
+        left: 0px;
+
     }
 
     .container-info span {
-        margin-left: 10px;
+        margin-left: 22px;
         font-size: 20px;
     }
 
     .price-product {
-        top: 460px;
+        top: 480px;
         left: 25px; 
+
     }
     
     .price-product span {
@@ -2861,16 +2870,19 @@ input[type="password"] {
     .quantity-selector {
         top: 605px;
         left: 200px;
+        width: 120px;
     }
     
     .please-login {
         top: 605px;
         left: 25px;
+
     }
 
     .btn-add  {
         top: 610px;
         left: 25px;
+
     }
 
     .container-product-description {
@@ -2884,7 +2896,15 @@ input[type="password"] {
         justify-content: center;
     }
 
-    
-
-    
+    .sticky-mobile-panel {
+        display: flex;
+        width: 100%;
+        height: 80px;
+        position: fixed;
+        bottom: 0;
+        background-color: #0c1821;
+        overflow-y: auto; 
+        z-index: 1000;
+    }
 }
+
