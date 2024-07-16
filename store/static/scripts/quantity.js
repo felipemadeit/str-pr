@@ -119,4 +119,24 @@ document.addEventListener('DOMContentLoaded', function() {
             console.error('Error:', error);
         });
     });
+
+    function moveElements()  {
+            const widthThreshold = 400;
+            const quantitySelector = document.getElementById('quantitySelector');
+            const btnAdd = document.getElementById('btnAdd');
+            const stickyMobilePanel = document.getElementById('stickyMobilePanel');
+            const form = document.getElementById('addToCartForm');
+
+            if (window.innerWidth <= widthThreshold) {
+                stickyMobilePanel.appendChild(quantitySelector);
+                stickyMobilePanel.appendChild(btnAdd);
+            } else {
+                form.insertBefore(quantitySelector, form.firstChild);
+                form.appendChild(btnAdd);
+            }
+        }
+
+        window.addEventListener('resize', moveElements);
+        window.addEventListener('load', moveElements);
+    
 });
