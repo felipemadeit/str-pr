@@ -2912,7 +2912,7 @@ input[type="password"] {
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        height: 100px;
+        height: 70px;
         position: fixed; 
         bottom: 0;
         background-color: #0c1821;
@@ -2924,7 +2924,7 @@ input[type="password"] {
     
     .quantity-selector {
         position: absolute;
-        left: 55%;
+        left: 54%;
         top: 50%;
         transform: translateY(-50%);
     }
@@ -2937,7 +2937,7 @@ input[type="password"] {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        left: 6%;
+        left: 3%;
         border: 1px solid white;
         box-sizing: border-box ;
 
@@ -2994,7 +2994,7 @@ input[type="password"] {
     .container-filter {
         width: auto;
         position: absolute;
-        top: 20px;
+        top: 30px;
         margin-left: 50%;
         transform: translate(-50%);
         flex-direction: column;
