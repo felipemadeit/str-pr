@@ -169,13 +169,16 @@ if (prevButtonKeyboards && nextButtonKeyboards && cardsContainerKeyboards) {
     );
     
     
+    const container = document.querySelector('.container-cards');
+
+        container.addEventListener('wheel', (event) => {
+            event.preventDefault();
+            container.scrollBy({
+                left: event.deltaY < 0 ? -20 : 20, // Ajusta la cantidad de desplazamiento aquí
+                behavior: 'smooth'
+            });
     
+
     
-    
-    
-    
-    
-    
-    
-}
+})};
 
