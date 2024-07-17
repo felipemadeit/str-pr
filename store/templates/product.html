@@ -39,6 +39,12 @@
         <h1>{{product.name}}</h1>
     </div>
 
+
+    <div class="price-product">
+        <span>{{product.get_format_price}}</span>
+    </div>
+
+
     <div class="container-info">
             {% if product.stock > 0 %}
                 <span style="color: green;"> &#x2713; Stock</span> 
@@ -49,13 +55,13 @@
             <span style="color: green;"> &#x2713; One year Warranty</span>
     </div>
 
+
+
     <div class="container-product-description">
         <p>{{product.description}}</p>
     </div>
 
-    <div class="price-product">
-        <span>{{product.get_format_price}}</span>
-    </div>
+    
 
     
 
@@ -110,5 +116,6 @@
 {% endblock %}
 
 {% block script %}
-    <script src="{% static 'scripts/quantity.js' %}"></script>   
+    <script src="{% static 'scripts/quantity.js' %}"></script> 
+   
 {% endblock %}

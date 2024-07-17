@@ -433,15 +433,7 @@ a {
     background-color: #90a2b6;
 }
 
-.footer {
-    display: flex;
-    position: relative;
-    width: 100%;
-    margin-top: 28%;
-    height: 100px;
-    background-color: #0c1821;
-    
-}
+
 
 .social-links  {
     display: flex;
@@ -1051,15 +1043,10 @@ input[type="password"] {
     display: flex;
     position:absolute;
     width: 1000px;
-    height: 300px;
     margin-top: 40px;
     margin-left: 180px;
-    overflow-y: scroll;
 }
 
-.container-product-description::-webkit-scrollbar {
-    display: none; /* Oculta la barra de scroll en navegadores WebKit */
-}
 
 .container-product-description p {
     font-weight: lighter;
@@ -1744,6 +1731,7 @@ input[type="password"] {
     height: 100%;
     overflow: auto;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 
 }
 
@@ -1815,6 +1803,7 @@ input[type="password"] {
     text-align: center;
     box-sizing: border-box; 
     backdrop-filter: blur(10px);   
+    -webkit-backdrop-filter: blur(10px);
     border-radius: 50px;
     color: white;
     gap: 10px;
@@ -2325,6 +2314,7 @@ input[type="password"] {
     height: 100%;
     overflow: hidden;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     z-index: 9999999999999999;
 
 }
@@ -2566,6 +2556,7 @@ input[type="password"] {
         width: 230px;
         margin-left: 50%;
         transform: translateX(-50%);
+
     }
 
     .show-all-keyboards:hover {
@@ -2735,9 +2726,15 @@ input[type="password"] {
         scrollbar-width: none;  /* Firefox */
     }
     
-    .footer {
+    .footer-home {
+        display: flex;
+        position: absolute;
         width: 100%;
-        overflow-x: hidden;
+        height: 100px;
+        margin-top: 150px;
+        backdrop-filter: blur(1000px);
+        -webkit-backdrop-filter: blur(1000px);
+
     }
 
     .container-creator {
@@ -2899,10 +2896,11 @@ input[type="password"] {
 
     .container-product-description {
         width: 90%;
+        position: absolute;
         top: 650px;
         margin-left: 50%;
         transform: translate(-50%);
-        bottom: 300px;
+        padding-bottom: 200px;
     }
 
     .container-product-description p {
@@ -2921,6 +2919,7 @@ input[type="password"] {
         z-index: 1000;
         padding: 0 20px;
         box-sizing: border-box;
+    
     }
     
     .quantity-selector {
@@ -2951,6 +2950,102 @@ input[type="password"] {
    .carousel-next, .carousel-prev {
         display: none;
    }
+
+    .tags { 
+        display: none;
+    }
+
+   
+
+    .container-filter {
+        width: auto;
+
+        position: absolute;
+        top: 20px;
+        left: 0px;
+        height: 200px;
+        margin-left: 50%;
+        transform: translate(-50%);
+        flex-direction: column;
+        transition: all 0.3s ease;
+        z-index: 1000000;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        transition: height 1s ease;
+    }
+
+    .order-by {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+    
+    .order-by.show {
+        display: inline-block;
+        opacity: 1;
+    }
+    
+    .order-by.hide {
+        opacity: 0;
+    }
+
+
+    
+    .container-filter {
+        width: auto;
+        position: absolute;
+        top: 20px;
+        margin-left: 50%;
+        transform: translate(-50%);
+        flex-direction: column;
+        z-index: 1000000;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        transition: height 0.5s ease;
+    }
+    
+    .order-by {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+    
+    .order-by.show {
+        display: inline-block;
+        opacity: 1;
+    }
+    
+    .order-by.hide {
+        opacity: 0;
+    }
+    
+    .container-components {
+        position: absolute;
+        width: 100%;
+        display: grid;
+        height: auto;
+        grid-template-columns: repeat(1, 1fr);
+        top: 70px; /* Ajusta según la altura inicial de container-filter */
+        margin-left: 0px;
+        padding: 0;
+        transition: top 0.5s ease;
+    }
+
+    .component-card {
+        margin-left: 50%;
+        transform: translate(-50%);
+        margin-bottom: 30px;
+    }
+
+
+    .container-prev-next {
+        width: 100%;
+        display: flex;
+        padding: 0;
+        margin-left: 0px;
+    }
+
+
 }
 
 
