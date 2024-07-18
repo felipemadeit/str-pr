@@ -111,7 +111,7 @@ header {
         position: absolute;
         flex-direction: column;
         width: 250px;
-        height: 100vh;
+        height: auto;
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         top: 80px;
