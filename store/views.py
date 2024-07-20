@@ -17,12 +17,12 @@ from django.urls import reverse_lazy
 from django.conf import settings
 from django.views.decorators.csrf import csrf_exempt
 import openai, os
-from openai import OpenAI
 from dotenv import load_dotenv
 import cohere
 
 
-cohere_key ='pSqevomHAcRbKwii5XBgwAE0Yi1sujMnWcg0Npu8'
+COHERE_KEY = os.getenv('COHERE_KEY')
+
 
 
 
@@ -120,11 +120,11 @@ def home_view(request):
     product_list = [f"{product.name}: {product.description} price: {product.price} id: {product.id}" for product in products]
 
     # if the api key is not valid
-    if not cohere_key:
+    if not COHERE_KEY:
         return JsonResponse({'error': 'Cohere API key is not set'}, status=500)
     
     # Instantiate the client with the api key loaded from dotenv
-    co = cohere.Client(cohere_key)
+    co = cohere.Client(COHERE_KEY)
     
     """
 

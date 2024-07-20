@@ -10,6 +10,11 @@
 
 {% block body %}
     <div class="container-form-login">
+
+        <div class="container-title">
+            <p class="title">Welcome Back</p>
+        </div>
+        
         <form action="{% url 'login' %}" method="POST">
             {% csrf_token %}
             {% if error %}
@@ -34,12 +39,14 @@
               </button>
               
             <div class="to-sign">
-                <a href="{% url 'sign_up' %}">Create an Account</a>
+                <span>Don´t have an account? </span>
+                <a href="{% url 'sign_up' %}">Sign Up</a>
             </div>
 
             <div class="button-google">
                 <a href="{% provider_login_url 'google' %}">
-                    Log in with google
+                    <img src="{% static 'media/svg/google.svg' %}">
+                    <span>Log in with Google</span>
                 </a>
             </div>
         </form>

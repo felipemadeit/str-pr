@@ -1,4 +1,8 @@
 from pathlib import Path
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 
 
@@ -10,7 +14,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-dji1ecafk4t+b5wws5*g+8#wr^r011&(v5&xd3nt(@-7$m-#gr'
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -45,11 +49,11 @@ AUTHENTICATION_BACKENDS = (
  
 
 LOGIN_REDIRECT_URL = '/'
-ACCOUNT_LOGOUT_REDIRECT_URL = '/'
-ACCOUNT_EMAIL_VERIFICATION = 'none'
-ACCOUNT_AUTHENTICATION_METHOD = 'username'
+# Additional configuration settings
+SOCIALACCOUNT_QUERY_EMAIL = True
+ACCOUNT_LOGOUT_ON_GET= True
+ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_EMAIL_REQUIRED = True
-
 
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
@@ -59,10 +63,7 @@ SOCIALACCOUNT_PROVIDERS = {
         ],
         'AUTH_PARAMS': {
             'access_type': 'online',
-        },
-        'CLIENT_ID': '162831051128-6ki2g8k0llb1525nclkjok72r94189f8.apps.googleusercontent.com',
-        'SECRET': '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'
-
+        }
     }
 }
 
@@ -101,12 +102,14 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+CONNECTION_KEY_POSTGRESQL = os.getenv('DATABASE_KEY')
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'store_database_postgresql',
         'USER': 'felipe',
-        'PASSWORD': 'IdeaTab2005',
+        'PASSWORD': CONNECTION_KEY_POSTGRESQL,
         'PORT': '5432'
     }
 }

@@ -510,18 +510,37 @@ a {
 
 .container-form-login {
     display: flex;
+    position: absolute;
     width: 400px;
-    height: 400px;
-    margin-top: 70px;
+    height:450px;
+    top: 120px;
     margin-left: 480px;
     background-color: rgba(255, 255, 255, 0.11);
     backdrop-filter: blur(100px);
     border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+.container-title {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    width: 250px;
+    height: 30px;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 800;
+    color: white;
+  }
 
 .button-login {
  position: absolute;
- top: 250px;
+ top: 270px;
  margin-left: 50%;
  transform: translate(-50%);
  border: none;
@@ -534,6 +553,39 @@ a {
  touch-action: manipulation;
 }
 
+.button-google {
+    display: flex;
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 200px;
+    height: 40px;
+    border-radius: 100px;
+    background-color: white;
+    padding: 0;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+        rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    cursor: pointer;
+    gap: 5px;
+    text-decoration: none;
+}
+.button-google span {
+    position: absolute;
+    top: 50%;
+    left:60px;
+    transform: translateY(-50%);
+    margin: 0;
+    color: black;
+}
+
+.button-google img {
+    left: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
 .shadow {
  position: absolute;
  top: 0;
@@ -613,7 +665,7 @@ a {
  outline: none;
 }
 .form-username_login {
-    margin-top: 40px;
+    margin-top: 80px;
     margin-left: 10px;
 }
 
@@ -628,7 +680,7 @@ a {
 }
 
 .form-password {
-    margin-top: 40px;
+    margin-top: 20px;
     margin-left: 10px;
 }
 
@@ -646,6 +698,7 @@ input[type="password"] {
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-left: 70px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .container_sign_up_form {
@@ -725,8 +778,11 @@ input[type="password"] {
     align-items: center;
     width: 200px;
     height: 30px;
-    margin-top: 120px;
-    margin-left: 100px;
+    margin-top: 1px;
+    margin-left: 52px;
+    gap: 5px;
+    font-size: 12px;
+    
 }
 
 .to-sign a {
@@ -2525,6 +2581,8 @@ input[type="password"] {
     transform: translate(-50% ,-50%);
     background-color: white;    
 }
+
+
 
 
 @media (max-width: 400px ) {
