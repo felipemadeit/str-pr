@@ -1,5 +1,9 @@
 {% extends 'index.html' %}
 
+{% load static %}
+
+{% load socialaccount %}
+
 {% block title %}
     Log In
 {% endblock %}
@@ -31,6 +35,12 @@
               
             <div class="to-sign">
                 <a href="{% url 'sign_up' %}">Create an Account</a>
+            </div>
+
+            <div class="button-google">
+                <a href="{% provider_login_url 'google' %}">
+                    Log in with google
+                </a>
             </div>
         </form>
     </div>
