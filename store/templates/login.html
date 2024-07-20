@@ -22,12 +22,17 @@
                 {{ form.password }}
             </div>
             <input type="hidden" name="next" value="{{ next }}">
-            <button class="btn-login">
-                Log in
-            </button>
+            <button class="button-login">
+                <span class="shadow"></span>
+                <span class="edge"></span>
+                <span class="front text"> Log In
+                </span>
+              </button>
+              
             <div class="to-sign">
                 <a href="{% url 'sign_up' %}">Create an Account</a>
             </div>
         </form>
     </div>
 {% endblock %}
+
