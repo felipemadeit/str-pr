@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -39,7 +40,6 @@ INSTALLED_APPS = [
     
 ]
 
-SITE_ID = 1
 
 
 AUTHENTICATION_BACKENDS = (
@@ -47,7 +47,7 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
 )
  
-
+SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
 # Additional configuration settings
 SOCIALACCOUNT_QUERY_EMAIL = True
