@@ -43,9 +43,6 @@
             <div class="container-img-brand"><img class="redragon-img" src="{% static 'media/logos-brand/redragon.png' %}" alt="redragon-logo"></div>
     </div>
 
-
-    
-
     <div class="wrapper-extras">
         <!--Text to the best selling processors section-->
         <div class="text-processors">
@@ -54,13 +51,22 @@
         <!--Button for the all processors view-->
         <div class="show-all-processors">
             <a href="{% url 'processors' %}">View All Processors</a>
-        </div>
+        </div>       
     </div>
 
 
     
 
     <!--Section to the processors carousel-->
+
+    <!--Text to the best selling processors section-->
+    <div class="text-processors-m">
+        <h2>BEST SELLING PROCESSORS</h2>
+    </div>
+    <!--Button for the all processors view-->
+    <div class="show-all-processors-m">
+        <a href="{% url 'processors' %}">View All Processors</a>
+    </div>
 
     <div class="show_products processors">
         <div class="arrow-next"><span>&#x2192;</span></div>
@@ -95,7 +101,12 @@
     </div>
     
     
-    
+    <div class="text-cards-m">
+        <h2>BEST SELLING GRAPHICS CARDS</h2>
+    </div>
+    <div class="show-all-cards-m">
+        <a href="{% url 'graphics' %}">View All Graphics Cards</a>
+    </div>
     
     <div class="show_products graphics">
         <div class="arrow-next"><span>&#x2192;</span></div>
@@ -128,7 +139,12 @@
         </div>    
     </div>
     
-    
+    <div class="text-laptops-m">
+        <h2>BEST SELLING LAPTOPS</h2>
+    </div>
+    <div class="show-all-laptops-m">
+        <a href="{% url 'laptops' %}">View All Laptops</a>
+    </div> 
     <div class="show_products laptops">
         <div class="arrow-next"><span>&#x2192;</span></div>
         <div class="arrow-prev"><span>&#x2190;</span></div>
@@ -162,7 +178,12 @@
     </div>
     
     
-    
+    <div class="text-keyboards-m">
+        <h2>BEST SELLING KEYBOARDS</h2>
+    </div>
+    <div class="show-all-keyboards-m">
+        <a href="{% url 'keyboards' %}">View All Keyboards</a>
+    </div>
     <div class="show_products keyboards">
         <div class="arrow-next"><span>&#x2192;</span></div>
         <div class="arrow-prev"><span>&#x2190;</span></div>
@@ -218,7 +239,7 @@
         </form>
     </div>
     
-    <!--<div class="footer-home">
+    <div class="footer-home">
         <div class="container-creator">Created by FelipeMadeIt</div>
         <div class="line-social"></div>
         <div class="social-links">
@@ -226,7 +247,7 @@
             <a href="https://github.com/felipemadeit" class="icon"><i class="fa-brands fa-github"></i></a>
 
         </div>
-    </div>-->
+    </div>
 
     
 

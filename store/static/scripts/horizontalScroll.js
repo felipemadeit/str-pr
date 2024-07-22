@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function() {
         container.addEventListener('wheel', (event) => {
             event.preventDefault();
             container.scrollBy({
-                left: event.deltaY < 0 ? -100 : 100, // Reduce the sensitivity by decreasing the amount scrolled
+                left: event.deltaY < 0 ? -1 : 1, // Reduce the sensitivity by decreasing the amount scrolled
                 behavior: 'smooth'
             });
         });
