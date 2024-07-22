@@ -859,9 +859,9 @@ input[type="password"] {
 .wrapper-extras {
     display: flex;
     position: absolute;
-    margin-top: 70px;
+    margin-top: 100px;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 18px;
     box-sizing: border-box;
     align-items: center;
     width: 1230px;
@@ -1058,10 +1058,9 @@ input[type="password"] {
     display: flex;
     position:absolute;
     width: 1000px;
-    height: 300px;
     margin-top: 40px;
-    margin-left: 180px;
-    overflow-y: scroll;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 .container-product-description::-webkit-scrollbar {
@@ -2618,6 +2617,7 @@ container-creator {
     
     
     .show-all-cards-m{
+        display: flex;
         text-align: center;
         border-radius: 8px;
         justify-content: center;
@@ -2627,6 +2627,12 @@ container-creator {
         width: 230px;
         margin-left: 50%;
         transform: translateX(-50%);
+    }
+
+    .show-all-cards-m a{
+        text-decoration: none;
+        color: white;
+
     }
 
     .show-all-cards-m:hover {
@@ -2639,6 +2645,7 @@ container-creator {
     }
 
     .show-all-keyboards-m {
+        display: flex;
         text-align: center;
         border-radius: 8px;
         justify-content: center;
@@ -2660,6 +2667,7 @@ container-creator {
     }
 
     .show-all-laptops-m {
+        display: flex;
         text-align: center;
         border-radius: 8px;
         justify-content: center;
@@ -2714,7 +2722,7 @@ container-creator {
         display: flex;
         width: 100%;
         position: relative;
-        top: 1380px;
+        top:120px;
         margin-left: 0px;
         align-items: center;
         justify-content: center;
@@ -2738,7 +2746,7 @@ container-creator {
         display: flex;
         width: 100%;
         position: absolute;
-        top: 2540px;
+        top: 2565px;
         margin-left: 0px;
         justify-content: center;
         align-items: center; 
@@ -2753,7 +2761,7 @@ container-creator {
         display: flex;
         width: 100%;
         position: absolute;
-        top: 1920px;
+        top: 1990px;
         margin-left: 0px;
         justify-content: center;
         align-items: center;
@@ -2763,8 +2771,10 @@ container-creator {
     /* Line to separate the carousels in the home view */
     
     .line-separator {
+        width: 100%;
         position: absolute;
         margin-left: 0px;
+        transform: none;
         top: 680px;
         width: 100%;
         height: 4px;
@@ -3008,15 +3018,21 @@ container-creator {
     }
 
     .container-product-description {
-        width: 90%;
         top: 650px;
-        margin-left: 50%;
-        transform: translate(-50%);
+        display: flex;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        margin-left: 0;
         bottom: 300px;
+        padding: 10px;
+        box-sizing: border-box;
+        overflow: visible;
     }
 
     .container-product-description p {
-        justify-content: center;
+        justify-content: none;
+
     }
 
     .sticky-mobile-panel {
@@ -3061,5 +3077,11 @@ container-creator {
    .carousel-next, .carousel-prev {
         display: none;
    }
+
+   .tags {
+        display: none;
+   }
+
+   
 
 }
