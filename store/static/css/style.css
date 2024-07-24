@@ -18,6 +18,7 @@ html {
 
 a {
     text-decoration: none;
+    color: white;
 }
 
 header {
@@ -1162,8 +1163,6 @@ input[type="password"] {
     position: absolute;
     width: 200px;
     height: 50px;
-    top: 480px;
-    left: 970px;
     align-items: center;
     gap: 5px;
 }
@@ -1211,26 +1210,7 @@ input[type="password"] {
     color: white;
 }
 
-.btn-add  {
-    display: flex;
-    position: absolute;
-    cursor: pointer;
-    top: 485px;
-    left: 750px;
-    color: white;
-    text-decoration: none;
-    background-color: #0c1821;
-    width: 150px;
-    height: 40px;
-    border-radius: 10px;
-    align-items: center;
-    vertical-align: middle;
-    gap: 5px;
-    padding: 1px 20px;
-    box-sizing: border-box;
-    border: none;
-    transition: transform 0.2s, box-shadow 0.2s;  
-}
+
 
 .btn-add:hover {
     transform: translateY(-5px); 
@@ -1341,10 +1321,10 @@ input[type="password"] {
     grid-template-columns: repeat(4, 4fr);
     padding: 20px;
     margin-top: 120px;
-    left: 50%;
+    margin-left: 750px;
     transform: translate(-50%);
     width: 1050px;
-    height: 3200px;
+    height: auto;
 }
 
 .container-components-processors {
@@ -1354,7 +1334,7 @@ input[type="password"] {
     margin-top: 120px;
     margin-left: 235px;
     width: 1050px;
-    height: 1200px;
+    height:auto;
 }
 
 .container-components-cards {
@@ -1364,7 +1344,7 @@ input[type="password"] {
     margin-top: 120px;
     margin-left: 235px;
     width: 1050px;
-    height: 1600px;
+    height:auto;
 }
 .container-components-rams {
     display: grid;
@@ -1373,7 +1353,7 @@ input[type="password"] {
     margin-top: 120px;
     margin-left: 235px;
     width: 1050px;
-    height: 1700px;
+    height:auto;
 }
 
 .container-components-motherboards {
@@ -1383,7 +1363,7 @@ input[type="password"] {
     margin-top: 120px;
     margin-left: 235px;
     width: 1050px;
-    height: 1250px;
+    height: auto;
 }
 
 .container-components-storages {
@@ -1393,7 +1373,7 @@ input[type="password"] {
     margin-top: 120px;
     margin-left: 235px;
     width: 1050px;
-    height: 1250px;
+    height: auto;
 }
 
 .container-components-case {
@@ -1403,7 +1383,7 @@ input[type="password"] {
     margin-top: 120px;
     margin-left: 235px;
     width: 1050px;
-    height: 1250px;
+    height: auto;
 }
 
 .container-components-headphone {
@@ -1413,7 +1393,7 @@ input[type="password"] {
     margin-top: 120px;
     margin-left: 235px;
     width: 1050px;
-    height: 1200px;
+    height: auto;
 }
 
 .container-components-keyboard {
@@ -1423,7 +1403,7 @@ input[type="password"] {
     margin-top: 120px;
     margin-left: 235px;
     width: 1050px;
-    height: 1200px;
+    height: auto;
 }
 
 .container-components-chairs {
@@ -1433,7 +1413,7 @@ input[type="password"] {
     margin-top: 120px;
     margin-left: 235px;
     width: 1050px;
-    height: 1200px;
+    height: auto;
 }
 
 .container-components-accessories{
@@ -1443,7 +1423,7 @@ input[type="password"] {
     margin-top: 120px;
     margin-left: 235px;
     width: 1050px;
-    height: 850px;
+    height: auto;
 }
 
 .container-components-laptops {
@@ -1453,7 +1433,7 @@ input[type="password"] {
     margin-top: 120px;
     margin-left: 235px;
     width: 1050px;
-    height: 1200px;
+    height: auto;
 
 }
 .add-cart {
@@ -1478,6 +1458,7 @@ input[type="password"] {
     width: 240px; 
     height: 370px; 
     margin-top: 5px;
+    margin-bottom: 10px;
     margin-right: 6px;
     border-radius: 20px;
     border: 2px solid white;
@@ -1542,14 +1523,15 @@ input[type="password"] {
 
 .container-prev-next {
     display: flex;
-    margin-top: 50px;
+    position:relative;
+    margin-top: 20px;
+   
+    bottom: 0px;
     gap: 70px;
-    left: 50%;
-    transform: translate(-50%);
-    width: 1050px;
-    height: 60px;
-    padding: 20px 430px 20px 470px;
-    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn-prev {
@@ -1597,8 +1579,7 @@ input[type="password"] {
     display:flex;
     position: absolute ;
     margin-top: 60px;
-    left: 50%;
-    transform: translate(-50%);
+    left: 230px;
     width: 1030px;
     height: 50px;
     padding: 5px 0px;
@@ -1654,6 +1635,9 @@ input[type="password"] {
     justify-content: center;
     align-items: center;
     transition: transform 0.2s, box-shadow 0.2s; 
+    border: 2px solid white;
+    text-decoration: none;
+    color: white;
 
 }
 
@@ -1687,6 +1671,9 @@ input[type="password"] {
     justify-content: center;
     align-items: center;
     transition: transform 0.2s, box-shadow 0.2s; 
+    border: 2px solid white;
+    text-decoration: none;
+    color: white;
 
 }
 
@@ -1718,7 +1705,8 @@ input[type="password"] {
     background-color: #0c1821;
     justify-content: center;
     align-items: center;
-    transition: transform 0.2s, box-shadow 0.2s; 
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 2px solid white; 
 
 }
 
@@ -1942,11 +1930,21 @@ input[type="password"] {
 
 .no-products {
     display: none;
-    width: 900px;
-    margin-top: 100px;
-    margin-left: 300px;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
     font-size: 30px;
     color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.no-products span {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 
@@ -1966,23 +1964,17 @@ input[type="password"] {
 }
 
 .container-cart {
-    position: relative;
-    top: 20px;
-    left:20px;
+    display: flex;
+    position: absolute;
+    top: 110px;
+    left:50%;
+    transform: translate(-50%);
     font-size: 30px;
     color: white;
     box-sizing: border-box;
     padding: 10px 50px;
 }
-.container-cart img {
-    position: absolute;
-    width: 40px;
-    height: auto;
-    top: 20px;
-    left: 370px;
-    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
 
-}
 
 .text-cart {
     position: relative;
@@ -2040,8 +2032,8 @@ input[type="password"] {
 .container-added-products {
     display: flex;
     position: absolute;
-    margin-top: 60px;
-    margin-left: 50px;
+    margin-top: 100px;
+    margin-left: 20px;
     width: 900px;
     height: 500px;
     box-sizing: border-box;
@@ -2065,8 +2057,8 @@ input[type="password"] {
     height: 300px;
     box-sizing: border-box;
     padding: 30px;
-    margin-top: 70px;
-    margin-left: 970px;
+    margin-top: 100px;
+    margin-left: 940px;
     border-radius: 20px;
 }
 #grand-total {
@@ -2601,6 +2593,7 @@ container-creator {
 
 .show-all-cards-m {
     display: none;
+
 }
 
 .show-all-keyboards-m {
@@ -2629,6 +2622,265 @@ container-creator {
 
 .text-laptops-m {
     display: none;
+}
+
+.container-buttons-shop {
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    height: 50px;
+    position:absolute;  
+    top: 500px;
+    left: 750px;
+    align-items: center;
+}
+
+.quantity-selector {
+    display: flex;
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    align-items: center;
+    gap: 5px;
+    top:0px;
+    left: 10px;
+}
+
+.btn-add  {
+    display: flex;
+    position: absolute;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    background-color: #0c1821;
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    align-items: center;
+    vertical-align: middle;
+    gap: 5px;
+    padding: 1px 20px;
+    box-sizing: border-box;
+    border: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    top:5px;
+    left: 200px;
+}
+
+@media (max-width: 1300px) {
+
+    .container-components {
+        width: 800px;
+        margin-left: 650px;
+        grid-template-columns: repeat(3, 4fr)
+    }
+}
+
+@media (min-width: 1500px) {
+
+    .container-buttons-shop {
+        left: 850px;
+    }
+
+    .product-name {
+        margin-left: 50px;
+    }
+
+    .price-product {
+        margin-left: 50px;
+    }
+   
+    .container-info {
+        position: absolute;
+        margin-left: 15px;
+
+    }
+
+
+}
+
+
+
+@media (min-width: 1700px) {
+
+    .container-filter {
+        left: 310px;
+    }
+
+    .container-components {
+        margin-left:850px;
+        width: 1450px;
+        grid-template-columns: repeat(5, 4fr)
+    }
+    .container-components-processors {
+        left:850px;
+        width: 1450px;
+        grid-template-columns: repeat(5, 4fr)
+    }
+    
+    .container-components-cards {
+        left:850px;
+        width: 1450px;
+        grid-template-columns: repeat(5, 4fr);
+    }
+    .container-components-rams {
+        left:850px;
+        width: 1450px;
+        grid-template-columns: repeat(5, 4fr)
+    }
+    
+    .container-components-motherboards {
+        left:850px;
+        width: 1450px;
+        grid-template-columns: repeat(5, 4fr)
+    }
+    
+    .container-components-storages {
+        left:850px;
+        width: 1450px;
+        grid-template-columns: repeat(5, 4fr)
+    }
+    
+    .container-components-case {
+        left:850px;
+        width: 1450px;
+        grid-template-columns: repeat(5, 4fr)
+    }
+    
+    .container-components-headphone {
+        left:850px;
+        width: 1450px;
+        grid-template-columns: repeat(5, 4fr)
+    }
+    
+    .container-components-keyboard {
+        left:850px;
+        width: 1450px;
+        grid-template-columns: repeat(5, 4fr)
+    }
+    
+    .container-components-chairs {
+        left:850px;
+        width: 1450px;
+        grid-template-columns: repeat(5, 4fr)
+    }
+    
+    .container-components-accessories{
+        left:850px;
+        width: 1450px;
+        grid-template-columns: repeat(5, 4fr)
+    }
+    
+    .container-components-laptops {
+        left:850px;
+        width: 1450px;
+        grid-template-columns: repeat(5, 4fr)
+    
+    }
+
+    .container-buttons-shop {
+    
+        margin-left: 40px;
+    }   
+
+    .product-name {
+        margin-left: 100px;
+    }
+
+    .price-product {
+        margin-left: 100px;
+    }
+   
+    .container-info {
+        margin-left: 70px;
+    }
+}
+
+@media (min-width: 1500px) {
+
+    .container-components {
+        left: 140px;
+        width: 1350px;
+        grid-template-columns: repeat(5, 4fr);
+    }
+
+    .container-components-processors {
+        margin-left: 175px;
+        width: 1350px;
+        grid-template-columns: repeat(5, 4fr);
+    }
+    
+    .container-components-cards {
+        margin-left: 175px;
+        width: 1350px;
+        grid-template-columns: repeat(5, 4fr);
+    }
+    .container-components-rams {
+        margin-left: 175px;
+        width: 1350px;
+        grid-template-columns: repeat(5, 4fr);
+    }
+    
+    .container-components-motherboards {
+        margin-left: 175px;
+        width: 1350px;
+        grid-template-columns: repeat(5, 4fr);
+    }
+    
+    .container-components-storages {
+        margin-left: 175px;
+        width: 1350px;
+        grid-template-columns: repeat(5, 4fr);
+    }
+    
+    .container-components-case {
+        margin-left: 175px;
+        width: 1350px;
+        grid-template-columns: repeat(5, 4fr);
+    }
+    
+    .container-components-headphone {
+        margin-left: 175px;
+        width: 1350px;
+        grid-template-columns: repeat(5, 4fr);
+    }
+    
+    .container-components-keyboard {
+        margin-left: 175px;
+        width: 1350px;
+        grid-template-columns: repeat(5, 4fr);
+    }
+    
+    .container-components-chairs {
+        margin-left: 175px;
+        width: 1350px;
+        grid-template-columns: repeat(5, 4fr);
+    }
+    
+    .container-components-accessories{
+        margin-left: 175px;
+        width: 1350px;
+        grid-template-columns: repeat(5, 4fr);
+    }
+    
+    .container-components-laptops {
+        margin-left: 175px;
+        width: 1350px;
+        grid-template-columns: repeat(5, 4fr);
+        
+    }
+
+    .product-name {
+        left: 800px;
+    }
+
+    .price-product {
+        left: 800px;
+    }
+   
+    .container-info {
+        left: 800px;
+    }
 }
 
 

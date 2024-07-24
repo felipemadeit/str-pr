@@ -41,13 +41,12 @@ document.addEventListener("DOMContentLoaded", function () {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'X-CSRFToken': getCookie('csrftoken') // Asegúrate de incluir el token CSRF
+                'X-CSRFToken': getCookie('csrftoken') 
             }
         })
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                // Verificar si el elemento existe antes de intentar eliminarlo
                 let cartItemElement = document.getElementById(`cart-item-${itemId}`);
                 if (cartItemElement) {
                     cartItemElement.remove();
@@ -110,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById('total-items').textContent = `${totalItems} Products`;
 
         if (totalItems == 0) {
-            spanProducts.style.display = 'block';
+            spanProducts.style.display = 'flex';
         } else {
             spanProducts.style.display = 'none';
         }

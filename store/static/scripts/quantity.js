@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Botones de cantidad
     const decrementBtn = document.getElementById('decrement');
     const incrementBtn = document.getElementById('increment');
     const quantityInput = document.getElementById('quantity');
