@@ -583,10 +583,11 @@ a {
 .error-login {
     display: flex;
     position: absolute;
-    width: 200px;
+    top: 190px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
     height: 30px;
-    margin-top: 220px;
-    margin-left: 100px;
     color: white;
 }
 
@@ -623,6 +624,19 @@ input[type="password"] {
     background-color: rgba(255, 255, 255, 0.158);
     backdrop-filter: blur(1000px);
     border-radius: 50px;
+}
+
+.error-sign_up {
+    display: flex;
+    position: absolute;
+    top: 260px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 
 .container-create-acccount {
@@ -703,7 +717,7 @@ input[type="password"] {
 .wrapper-sign {
     display: flex;
     position: absolute;
-    top: 200px;
+    top: 210px;
     width: 100%;
     height: 50px;
     justify-content: center;
@@ -3025,21 +3039,6 @@ container-creator {
         right: 50px;
     }
 
-    .container-form-login {
-        display: flex;
-        width: 100%;
-        margin-left: 0px;
-        border: none;
-        background-color: transparent;
-    }
-
-    .btn-login {
-        background-color: black;
-    }
-
-    .to-sign {
-        font-size: 20px;
-    }
 
     .carousel-container {
         top: 30px;
@@ -3192,6 +3191,11 @@ container-creator {
         display: none;
    }
 
+
+   .container-create-acccount {
+   background-color: transparent;
+   backdrop-filter: blur(0px);
+}
    
 
 }

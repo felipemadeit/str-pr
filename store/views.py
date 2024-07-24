@@ -19,6 +19,8 @@ from django.views.decorators.csrf import csrf_exempt
 import openai, os
 from dotenv import load_dotenv
 import cohere
+from django.contrib.auth import login as auth_login
+from django.contrib.auth.backends import ModelBackend
 
 
 COHERE_KEY = os.getenv('COHERE_KEY')
@@ -788,7 +790,7 @@ def sign_up_view (request):
                 # Save the user 
                 user.save()
                 # Create a session to the user registered
-                login(request, user)
+                auth_login(request, user, backend='django.contrib.auth.backends.ModelBackend')
                 # Redirect to the home view
                 return redirect('home')
             # try to catch the integrity error
