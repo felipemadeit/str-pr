@@ -12,24 +12,27 @@
     <div class="slogan-div">
         <img class="slogan-img" src="{% static 'media/brand/letras.png' %}">
     </div>
-    <div class="container-cards">
-        <div class="product-card">
-            <a href="{% url 'accessory' %}">
-                <img class="products-img" id="accessories-img" src="{% static 'media/brand/compnts.png' %}">
-            </a>            
-            <span id="accessories-span" class="cards-span">Accessories</span>
-        </div>
-        <div class="product-card">
-            <a href="{% url 'components' %}">
-                <img class="products-img" id="components-img" src="{% static 'media/brand/prebuild.png' %}">
-            </a>
-            <span id="components-span" class="cards-span">Components</span>
-        </div>
-        <div class="product-card">
-            <a href="{% url 'laptops' %}">
-                <img class="products-img" id="laptops-img" src="{% static 'media/brand/alp.png' %}">
-            </a>
-            <span id="laptops-span" class="cards-span">Laptops</span>
+    <div class="wrapper-container-cards">
+        <div class="container-cards">
+            <div class="product-card">
+                <a href="{% url 'accessory' %}">
+                    <img class="products-img" id="accessories-img" src="{% static 'media/brand/compnts.png' %}">
+                </a>            
+                <span id="accessories-span" class="cards-span">Accessories</span>
+            </div>
+            <div class="product-card">
+                <a href="{% url 'components' %}">
+                    <img class="products-img" id="components-img" src="{% static 'media/brand/prebuild.png' %}">
+                </a>
+                <span id="components-span" class="cards-span">Components</span>
+            </div>
+            <div class="product-card">
+                <a href="{% url 'laptops' %}">
+                    <img class="products-img" id="laptops-img" src="{% static 'media/brand/alp.png' %}">
+                </a>
+                <span id="laptops-span" class="cards-span">Laptops</span>
+            </div>
+            
         </div>
     </div>
     <!--Div for brands-->
@@ -81,7 +84,6 @@
                             <span class="product-price">{{ processor.get_format_price }}</span>
                         </a>
                         <span class="span-stock"> &#x2713; Stock</span>
-                        <a class="add-cart" href="#">Add to cart</a>
                     </div>
                 {% endfor %}
             </div>
@@ -121,7 +123,6 @@
                             <span class="product-price">{{card.get_format_price}}</span>
                         </a>
                         <span class="span-stock"> &#x2713; Stock</span>
-                        <a class="add-cart" href="#">Add to cart</a>
                     </div>
                 {% endfor %}
             </div>
@@ -158,7 +159,6 @@
                             <span class="product-price">{{laptop.get_format_price}}</span>
                         </a>
                         <span class="span-stock"> &#x2713; Stock</span>
-                        <a class="add-cart" href="#">Add to cart</a>
                     </div>
                 {% endfor %}
             </div>
@@ -197,7 +197,6 @@
                             <span class="product-price">{{keyboard.get_format_price}}</span>
                         </a>
                         <span class="span-stock"> &#x2713; Stock</span>
-                        <a class="add-cart" href="#">Add to cart</a>
                     </div>
                 {% endfor %}
             </div>
@@ -215,10 +214,12 @@
     
     <div class="windowBot">
         <div class="top-bar">
-            <img class="message-img" src="{% static 'media/svg/message-chatbot.svg' %}">
+            <img class="message-img"
+                src="https://api.dicebear.com/9.x/bottts/svg?seed=Spooky&radius=50&baseColor=fb8c00&eyes=roundFrame01&face=square01&mouth=diagram&sides=antenna02&texture=circuits&textureProbability=100"
+                alt="avatar" />
             <span class="span-name">PC Guru</span>
             <img class="online-img" src="{% static 'media/svg/circle-check.svg' %}">
-            <img class="close-img" src="{% static 'media/svg/square-rounded-x.svg' %}" alt="close-svg"> 
+            <img class="close-img" src="{% static 'media/svg/maximize.svg' %}" alt="close-svg"> 
         </div>
         
         <div class="chat-content" id="chat-content">

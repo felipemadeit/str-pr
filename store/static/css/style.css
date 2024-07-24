@@ -206,16 +206,24 @@ header {
     filter: brightness(10000%);
 }
 
+.wrapper-container-cards {
+    display: flex;
+    width: 100%;
+    height: 310px;
+    justify-content: center;
+    align-items: center;
+    overflow-y: visible;
+}
 
 .container-cards {
     display: flex;
     position: absolute;
-    top: 250px;
-    width: 100%;
-    height: 350px;
+    width: 1150px;
+    height: 300px;
     justify-content: space-around;
     box-sizing: border-box;
-    padding: 20px 70px;
+    padding: 20px 0px;
+    overflow-y: visible;
 }
 
 
@@ -251,6 +259,7 @@ header {
     width: 20%;
     color: white;
 }  
+
 
 
 a {
@@ -303,9 +312,9 @@ a {
 }
 
 #components-img {
-    width: 280px;
+    width: 270px;
     height: auto;
-    margin-top: -45px;
+    margin-top: -38px;
     margin-left: 16px;
 }
 
@@ -533,39 +542,42 @@ a {
 
 .container-form-login {
     display: flex;
-    width: 400px;
+    position: absolute;
+    width: 500px;
     height: 400px;
     margin-top: 70px;
-    margin-left: 480px;
-    background-color: #2b2d42;
-
-    border: 3px solid ;
-    border-radius: 5px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: rgba(255, 255, 255, 0.158);
+    backdrop-filter: blur(1000px);
+    border-radius: 50px;
 }
-
-.btn-login  {
+.container-title {
+    display: flex;
     position: absolute;
-    width: 70px;
+    width: 150px;
     height: 30px;
-    margin-top: 120px;
-    margin-left: 160px;
-    background-color: transparent;
-    border: 2px solid black;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
     color: white;
-
 }
 
-
+.title-welcome {
+    color: white;
+}
 
 
 .form-username_login {
-    margin-top: 40px;
-    margin-left: 10px;
+    position: absolute;
+    width: 200px;
+    height: 80px;
+    top: 70px;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 .error-login {
@@ -579,95 +591,125 @@ a {
 }
 
 .form-password {
-    margin-top: 40px;
-    margin-left: 10px;
+    position: absolute;
+    width: 200px;
+    height: 80px;
+    top: 140px;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
-    margin-left: 70px;
     color: white;
 }
-
 input[type="text"],
 input[type="password"] {
     width: 100%;
-    padding: 10px;
+    height: 30px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    margin-left: 70px;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
-.container_sign_up_form {
+.container-sign-up-form {
     display: flex;
-    width: 800px;
+    position: absolute;
+    width: 500px;
     height: 400px;
     margin-top: 70px;
-    margin-left: 278px;
-    background-color: #2b2d42;
-    border: 3px solid ;
-    border-radius: 5px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: rgba(255, 255, 255, 0.158);
+    backdrop-filter: blur(1000px);
+    border-radius: 50px;
 }
 
-.error-sign_up {
+.container-create-acccount {
+    display: flex;
     position: absolute;
-    margin-top: 270px;
-    margin-left: 320px;
-    width: 250px;
-    height: 40px;
+    width: 200px;
+    height: 30px;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 
-.btn-create  {
+.container-create-acccount h2 {
+    color: white;
+}
+
+
+
+.form-user-sign {
     position: absolute;
-    width: 180px;
-    height: 50px;
-    margin-top: 320px;
-    margin-left: 300px;
-    background-color: transparent;
-    border: 2px solid black;
-    border-radius: 4px;
+    width: 200px;
+    height: 80px;
+    top: 70px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.form-pwd1 {
+    position: absolute;
+    width: 200px;
+    height: 80px;
+    top: 140px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.form-pwd2 {
+    position: absolute;
+    width: 200px;
+    height: 80px;
+    top: 210px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+
+.btn-create {
+    display: flex;
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    transform: translate(-50%);
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 30px;
+    gap: 10px;
+    border-radius: 20px;
+    background-color: white;
     cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
+    border: none;
 }
 
-
-.label-username_login {
-    position: absolute;
-    display: flex;
-    margin-top: 40px;
-    margin-left: 120px;
-    gap: 75px;
-}
-.label-username_login input {
-    width: 200px;
+.btn-create a {
+    color: white;
+    font-size: 15px;
 }
 
-.label-password1 {
+.btn-create span {
+    color:black;
+    font-size: 15px;
+}
+
+.wrapper-sign {
     display: flex;
     position: absolute;
-    margin-top: 120px;
-    margin-left: 120px;
-    gap: 80px;
-}
+    top: 200px;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
 
-.label-password1 input {
-    width: 200px;
 }
-
-.label-password2 {
-    display: flex;
-    position: absolute;
-    margin-top: 200px;
-    margin-left: 120px;
-}
-
-.label-password2 input {
-    width: 200px;
-}
-
 
 .to-sign {
     display: flex;
@@ -676,13 +718,19 @@ input[type="password"] {
     align-items: center;
     width: 200px;
     height: 30px;
-    margin-top: 60px;
-    margin-left: 100px;
+    gap: 10px;
 }
 
 .to-sign a {
     color: white;
+    font-size: 15px;
 }
+
+.to-sign span{
+    color:black;
+    font-size: 15px;
+}
+
 
 .line-social {
     display: flex;
@@ -861,7 +909,7 @@ input[type="password"] {
     position: absolute;
     margin-top: 100px;
     justify-content: space-between;
-    padding: 0 18px;
+    padding: 0 10px;
     box-sizing: border-box;
     align-items: center;
     width: 1230px;
@@ -884,6 +932,7 @@ input[type="password"] {
     justify-content: center;
     align-items: center;
     transition: transform 0.2s, box-shadow 0.2s; 
+    border: 2px solid white;
 
 }
 
@@ -1274,10 +1323,12 @@ input[type="password"] {
 
 .container-components {
     display: grid;
+    position: absolute;
     grid-template-columns: repeat(4, 4fr);
     padding: 20px;
     margin-top: 120px;
-    margin-left: 235px;
+    left: 50%;
+    transform: translate(-50%);
     width: 1050px;
     height: 3200px;
 }
@@ -1479,8 +1530,9 @@ input[type="password"] {
     display: flex;
     margin-top: 50px;
     gap: 70px;
-    margin-left: 200px;
-    width: 1100px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 1050px;
     height: 60px;
     padding: 20px 430px 20px 470px;
     box-sizing: border-box;
@@ -1492,7 +1544,7 @@ input[type="password"] {
     height: 30px;
     position: absolute;
     color: white;
-    font-size: 20px;
+    font-size: 25px;
     margin-left: 30px;
     align-items: center;
     justify-content: center;
@@ -1513,7 +1565,7 @@ input[type="password"] {
     text-align: center;
     position: absolute;
     color: white;
-    font-size: 20px;
+    font-size: 30px;
     margin-left: 130px;
     align-items: center;
     justify-content: center;
@@ -1530,11 +1582,12 @@ input[type="password"] {
 .container-filter {
     display:flex;
     position: absolute ;
-    margin-top: 70px;
-    margin-left: 250px;
+    margin-top: 60px;
+    left: 50%;
+    transform: translate(-50%);
     width: 1030px;
     height: 50px;
-    padding: 5px 10px;
+    padding: 5px 0px;
     box-sizing: border-box;
     gap: 30px;
 
@@ -1550,6 +1603,7 @@ input[type="password"] {
     height: 40px;
     background-color: #171f26;
     color: white;
+    border: 2px solid white;
 }
 
 .order-by {
@@ -1562,6 +1616,7 @@ input[type="password"] {
     height: 40px;
     background-color: #171f26;
     color: white;
+    border: 2px sollid white;
 }
 
 .order-by:hover {
@@ -1571,11 +1626,8 @@ input[type="password"] {
 .order-by.active {
     background-color: white;
     color: black;
+    border: 2px solid white;
 }
-
-
-
-
 
 .show-all-cards {
     display: flex;
@@ -1657,6 +1709,18 @@ input[type="password"] {
 }
 
 
+.show-all-keyboards:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 5px 10px rgba(255, 255, 
+    
+255, 0.5); 
+
+}
+
+.show-all-keyboards:active {
+    transform: translateY(0);
+}
+
 
 .show-all-keyboards a {
     color: white;
@@ -1667,7 +1731,7 @@ input[type="password"] {
     display: inline-flex;
     width: 100%;
     height: 150px;
-    margin-top: 350px;
+    margin-top: 72px;
     margin-bottom: 50px;
     padding: 2px 100px;
     box-sizing: border-box;
@@ -2150,12 +2214,49 @@ input[type="password"] {
     margin-left: 40px;
 }
 
+.btn-login {
+    position: absolute;
+    top: 260px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 200px;
+    height: 35px;
+    border-radius: 20px;
+    border: none;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+    background-color: white;
+}
+
+
+.google-login-button {
+    display: flex;
+    position: absolute;
+    top: 320px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 200px;
+    height: 35px;
+    background-color: white;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.google-login-button span {
+    text-decoration: none;
+    color: black;
+}
+
 
 .button-chat {
     display: flex;
     position: fixed;
     bottom: 20px;
-    right: 50px;
+    right: 20px;
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -2223,7 +2324,7 @@ input[type="password"] {
 }
 
 .message-img {
-    width: 30px;
+    width: 40px;
     height: auto;
 }
 
@@ -2245,6 +2346,7 @@ input[type="password"] {
     width: 25px;
     height: auto;
     margin-left: 140px;
+    cursor: pointer;
 
 }
 .close-img:hover {
@@ -2517,9 +2619,15 @@ container-creator {
 
 
 @media (max-width: 400px ) {
+
+    .wrapper-container-cards {
+        width: 100%;
+        margin-left: 0px;
+    } 
     
     .container-cards {
         display: flex;
+        width: 100%;
         overflow-x: scroll;
         overflow-y: hidden;
         box-sizing: border-box;
@@ -2570,6 +2678,7 @@ container-creator {
 
     .container-brands {    
         display: grid;
+        margin-top: 37px;
         width: 100%;
         grid-auto-flow: row;
         grid-auto-columns: min-content;
@@ -2577,6 +2686,7 @@ container-creator {
         gap: 10px;
         justify-content: center;
         height: 170px;
+        overflow: hidden;
     }
 
     /* Hide scrollbar for other browsers (using pseudo-element approach) */
