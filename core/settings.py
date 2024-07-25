@@ -2,7 +2,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 import os
 
-load_dotenv()
+
 
 
 
@@ -14,12 +14,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = 'django-insecure-dji1ecafk4t+b5wws5*g+8#wr^r011&(v5&xd3nt(@-7$m-#gr'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['felipemadeit.pythonanywhere.com']
 
 
 # Application definition
@@ -37,7 +36,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
     'store',
-    
+
 ]
 
 
@@ -46,7 +45,7 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
 )
- 
+
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
 # Additional configuration settings
@@ -54,6 +53,17 @@ SOCIALACCOUNT_QUERY_EMAIL = True
 ACCOUNT_LOGOUT_ON_GET= True
 ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_EMAIL_REQUIRED = True
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '162831051128-6ki2g8k0llb1525nclkjok72r94189f8.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [
+    'profile',
+    'email',
+]
 
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
@@ -63,7 +73,8 @@ SOCIALACCOUNT_PROVIDERS = {
         ],
         'AUTH_PARAMS': {
             'access_type': 'online',
-        }
+        },
+         'OAUTH_PKCE_ENABLED': True,
     }
 }
 
@@ -106,11 +117,12 @@ CONNECTION_KEY_POSTGRESQL = os.getenv('DATABASE_KEY')
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'store_database_postgresql',
-        'USER': 'felipe',
-        'PASSWORD': CONNECTION_KEY_POSTGRESQL,
-        'PORT': '5432'
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'felipemadeit$products_database',
+        'USER': 'felipemadeit',
+        'PASSWORD': 'IdeaTab2005',
+        'HOST': 'felipemadeit.mysql.pythonanywhere-services.com',
+        'PORT': '3306'
     }
 }
 
@@ -154,6 +166,10 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 MEDIA_URL = 'media/'
+
+
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
